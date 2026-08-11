@@ -1,0 +1,71 @@
+/* --- PENGATURAN DASAR & VARIABEL --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #030712; /* Warna latar belakang sangat gelap (slate-950) */
+    color: #f8fafc; /* Warna teks terang (slate-50) */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    selection-background-color: #06b6d4;
+    selection-color: #030712;
+}
+
+/* --- ANIMASI HALUS --- */
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- KUSTOMISASI TAMBAHAN KOMPONEN --- */
+header {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Efek transisi halus untuk seluruh tombol interaktif */
+button {
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Kustomisasi scrollbar agar senada dengan tema modern */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0891b2;
+}
